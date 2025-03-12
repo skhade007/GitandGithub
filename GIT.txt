@@ -1,0 +1,78 @@
+gb-local repo(non bare repo)
+gh-remote repo(central bare)
+
+git workflow:- working directory>(add)>staging area>(commit)>local repo.
+-want to push any file in github, hub repo mandatory.
+
+/D/sahil/LANGUAGES/Git #change directory using linux cmd                                  
+configure global and local level we take global
+git config --global user.name "snehal khade"
+git config --global user.email "khadesnehal7@gmail.com"
+git config --list
+
+
+VS code:-
+file select >select terminal
+start same as git bash.
+
+now start:- diff of clone and pull-clone download the entire repo,pull only fetch the latest changes.
+git clone https://github.com/skhade007/web-page-1.git #copy hub repo in our local machine.
+
+assigmnt1: simple file create and push repo
+
+-crate one test file .html,.phy etc.
+a)git status #fatal: not a git repository (or any of the parent directories):
+b)git init # .git hidden file generated means rigtht now is git environment.
+c)git status #On branch master/No commits yet/Untracked files:(use "git add <file>..." to include in what will be committed)
+                          git_test1.txt
+                         nothing added to commit but untracked files present (use "git add" to track
+d)git add Git_test1.txt #(.)means add all files in folder.
+e)git status #Changes to be committed:(use "git rm --cached <file>..." to unstage)
+                            new file:   git_test1.txt
+f)git commit -m "my first commit" #[master (root-commit) ca5a97d] my first commit
+                                    1 file changed, 1 insertion(+) create mode 100644 git_test1.txt
+                         nothing to commit, working tree clean
+*****************************git -am "enter message"# this command used to add+commit***********************
+G)
+ git status:1)untracked- new files that git doesn't yet track
+            2)new file/modified- changes done in file(show green in vs)
+            3)staged- file is ready to be commited
+            4)unmodified- unchanged (done)
+commit status:nothing to commit, working tree clean
+
+
+
+git remote add origin https://github.com/skhade007/localrepo.git #coonection establish local and remote.
+ git remote -v #to check
+                    origin  https://github.com/skhade007/localrepo.git (fetch)
+                    origin  https://github.com/skhade007/localrepo.git (push)
+ 
+
+git branch #to check which branch
+  * master
+git branch -M main #rename  master branch main because hub branch name is also main thats why we can also try to master but that tym hub name also changed as amaster.
+ git branch        
+  * main
+git push origin main #######data sucessfully save in hub repo########
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+assigmnt2:create branches and try to merge hub and local:
+git branch feature1 #create one branch and here data is same as main branch
+  feature1
+git checkout feature1 #go to feature1 branch
+git branch
+  * feature1
+  main
+# current branch not deleted,first checkout the another branch then delete(create one feature2 branch and try to delete as mention below)
+git branch -d feature2 #featrue2 branch deleted
+git branch
+  * feature1
+    main
+git add .
+git status
+git checkout feature1
+git branch
+  * feature1
+    main
+PS D:\sahil\LANGUAGES\Git\git demo> #try to merge in github using compare and pull request option then pull on local machine
+PS D:\sahil\LANGUAGES\Git\git demo> git pull origin main
