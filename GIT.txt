@@ -1,6 +1,6 @@
 gb-local repo(non bare repo)
 gh-remote repo(central bare)
-
+-when we select readme.md in hub that tym mandatory to copy/crate readme.md file  in local also
 git workflow:- working directory>(add)>staging area>(commit)>local repo.
 -want to push any file in github, hub repo mandatory.
 
@@ -22,7 +22,7 @@ assigmnt1: simple file create and push repo
 
 -crate one test file .html,.phy etc.
 a)git status #fatal: not a git repository (or any of the parent directories):
-b)git init # .git hidden file generated means rigtht now is git environment.
+b)git init # .git hidden file generated means rigtht now is git environment.provide environment to folder not file.
 c)git status #On branch master/No commits yet/Untracked files:(use "git add <file>..." to include in what will be committed)
                           git_test1.txt
                          nothing added to commit but untracked files present (use "git add" to track
@@ -42,8 +42,8 @@ commit status:nothing to commit, working tree clean
 
 
 
-git remote add origin https://github.com/skhade007/localrepo.git #coonection establish local and remote.
- git remote -v #to check
+git remote add origin https://github.com/skhade007/localrepo.git #connection establish local and remote.
+ git remote -v #to check remote
                     origin  https://github.com/skhade007/localrepo.git (fetch)
                     origin  https://github.com/skhade007/localrepo.git (push)
  
@@ -54,10 +54,11 @@ git branch -M main #rename  master branch main because hub branch name is also m
  git branch        
   * main
 git push origin main #######data sucessfully save in hub repo########
+after that we can also create new file in that folder and try to push successfully(ex: create one file in same folder and try to push in hub)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 assigmnt2:create branches and try to merge hub and local:
-git branch feature1 #create one branch and here data is same as main branch
+git branch feature1 #create one branch and here data is same as main branch also use #git checkout -b feature1 #create and automatically navigate.
   feature1
 git checkout feature1 #go to feature1 branch
 git branch
@@ -68,11 +69,21 @@ git branch -d feature2 #featrue2 branch deleted
 git branch
   * feature1
     main
-git add .
+do changes on feature1 branch # then we can change branch main and see there is no data available as feature branch.
 git status
-git checkout feature1
+git add and commit.
+git push origin feature1 # push this branch to hub
+#here is hub shows feature and main branch and now try to merge on hub first
 git branch
   * feature1
     main
-PS D:\sahil\LANGUAGES\Git\git demo> #try to merge in github using compare and pull request option then pull on local machine
-PS D:\sahil\LANGUAGES\Git\git demo> git pull origin main
+git diff main #see difrence in branches,when we are in feature1 branch that tym is run
+
+Two ways to merge: for hub merge branches using PR(pull request)
+ 1)#try to merge in github using compare and pull request option then pull on local machine,after pull/merge both branch data is same.
+#in hub both branch are merge after the PR but local machine still both branch not merge 
+git pull origin main #remote changes on local machie
+2)git branch
+* feature1
+    main
+git merge main# used to merge branches in local mashine and then oush on hub.
