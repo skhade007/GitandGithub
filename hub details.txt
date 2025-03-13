@@ -1,2 +1,4 @@
 hello everyone
 new feature added one
+1)rename file:Go to the repository on GitHub>Navigate to the file you want to rename>Click the pencil (edit) icon to edit the file>In the file name field, rename the file>Scroll down and commit the change.
+2)Renaming a Branch:Go to GitHub and Open Your Repository>Go to the "Branches" Section>Find the Branch to Rename>Next to the branch name, you should see a small pencil icon (edit icon). Click on it.
