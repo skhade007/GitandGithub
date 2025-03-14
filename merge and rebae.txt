@@ -1,0 +1,41 @@
+push- on hub repo atleast one commit or fille required.
+
+assigmnt2:create branches and try to merge hub and local:
+git branch feature1 #create one branch and here data is same as main branch also use or #git checkout -b feature1 #create and automatically navigate.
+  feature1
+git checkout feature1 #go to feature1 branch
+git branch
+  * feature1
+    main
+# current branch not deleted,first checkout the another branch then delete(create one feature2 branch and try to delete as mention below)
+git branch -d feature2 #featrue2 branch deleted
+git branch
+  * feature1
+    main
+do changes on feature1 branch # then we can change branch main and see there is no data available same as feature branch.
+git status
+git add and commit.
+git push origin feature1 # push this branch to hub
+#here is hub shows feature and main branch but not merge, now try to merge on hub first
+git branch
+  * feature1
+    main
+git diff main #see difrence in branches,when we are in feature1 branch that tym is run
+
+Two ways to merge: 
+1)for hub merge branches using PR(pull request)
+ #try to merge in github using compare and pull request option then pull on local machine,after pull/merge both branch data is same.
+#in hub both branch are merge after the PR but local machine still both branch not merge 
+git pull origin main #remote changes on local machie now hub and local code is same.
+2)for local
+git branch
+* feature1
+    main
+git merge main# used to merge branches in local mashine and then push on hub.if * feature1 then merge main.
+
+
+git branch
+  * feature1
+    main
+ls #see which files in feature1 branch
+#when we create undefined file this file is available in both branch
