@@ -42,7 +42,7 @@ commit status:nothing to commit, working tree clean
 
 
 
-git remote add origin https://github.com/skhade007/localrepo.git #connection establish local and remote.
+git remote add origin https://github.com/skhade007/localrepo.git #connection establish local and remote using name of origin.
  git remote -v #to check remote
                     origin  https://github.com/skhade007/localrepo.git (fetch)
                     origin  https://github.com/skhade007/localrepo.git (push)
@@ -52,10 +52,30 @@ git remote rename origin mmyname #rename origin to myname
                     myname  https://github.com/skhade007/localrepo.git (push)
 git branch #to check which branch
   * master
-git branch -M main #rename  master branch main because hub branch name is also main thats why we can also try to master but that tym hub name also changed as amaster.
+git branch -M main #rename  master branch main because hub branch name is also main thats why we can also try to master but that tym hub name also changed as a master.
  git branch        
   * main
 git push origin main #######data sucessfully save in hub repo########
+git push -u myname main # nxt tyme we direct used git push comand only
 after that we can also create new file in that folder and try to push successfully(ex: create one file in same folder and try to push in hub)
-
+git pull origin main # fetch all data on hub to repo.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+git log #see comit details
+git log -2 #see last 2 commits
+git log --online #show all online comit
+git log --grep "hye" #find hye in file
+git branch -d feature2 #featrue2 branch deleted
+git show #see what is write in file
+git Show <tag name or coomit id> see particular
+git remote rm myname #remove origin
+git rm file name #permenantly deleted
+git rm --cached filename #delete only git environment
+*push- on hub repo atleast one commit or fille required.
+git reset file name #move file staging area to workspace
+git reset --hard
+git reset --soft
+git revert
+git clean -n #dry run
+git clean -f #forcefully
+git tag #see all the list of tag
+git tag -a <tag name> -m <"msg"><commit id>
