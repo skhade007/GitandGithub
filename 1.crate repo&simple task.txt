@@ -78,5 +78,6 @@ git reset --soft
 git revert #used to create a new commit that undoes the changes of a previous commit
 git clean -n #dry run check which files are untracked (i.e., not staged or committed) and would be deleted if you run git clean -f.
 git clean -f #forcefully delete untracked files in your Git working directory.
+rm-r or rm -rf
 git tag #see all the list of tag
 git tag -a <tag name> -m <"msg"><commit id>
