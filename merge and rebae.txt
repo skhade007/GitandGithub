@@ -1,4 +1,10 @@
 push- on hub repo atleast one commit or fille required.
+git branch
+  * feature1
+    main
+ls #see which files in feature1 branch
+#when we create undefined file this file show all branches after commit see only particular branch.
+
 
 assigmnt2:create branches and try to merge hub and local:
 git branch feature1 #create one branch and here data is same as main branch also use or #git checkout -b feature1 #create and automatically navigate.
@@ -32,10 +38,3 @@ git branch
 * feature1
     main
 git merge main# used to merge branches in local mashine and then push on hub.if * feature1 then merge main.
-
-
-git branch
-  * feature1
-    main
-ls #see which files in feature1 branch
-#when we create undefined file this file is available in both branch
