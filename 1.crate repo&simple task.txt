@@ -60,6 +60,7 @@ git push -u myname main # nxt tyme we direct used git push comand only
 after that we can also create new file in that folder and try to push successfully(ex: create one file in same folder and try to push in hub)
 git pull origin main # fetch all data on hub to repo.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*push- on hub repo atleast one commit or fille required.
 git log #see comit details
 git log -2 #see last 2 commits
 git log --online #show all online comit
@@ -70,7 +71,7 @@ git Show <tag name or coomit id> see particular
 git remote rm myname #remove origin
 git rm file name #permenantly deleted
 git rm --cached filename #delete only git environment
-*push- on hub repo atleast one commit or fille required.
+git restore --staged 'filename'
 git reset file name #move file staging area to workspace
 git reset --hard
 git reset --soft
