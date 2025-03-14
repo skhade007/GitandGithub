@@ -61,22 +61,22 @@ after that we can also create new file in that folder and try to push successful
 git pull origin main # fetch all data on hub to repo.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 *push- on hub repo atleast one commit or fille required.
-git log #see comit details
+git log #see commit history
 git log -2 #see last 2 commits
-git log --online #show all online comit
+git log --online #quickly scanning commit history
 git log --grep "hye" #find hye in file
 git branch -d feature2 #featrue2 branch deleted
 git show #see what is write in file
-git Show <tag name or coomit id> see particular
+git Show <tag name or coomit id> #see particular
 git remote rm myname #remove origin
-git rm file name #permenantly deleted
-git rm --cached filename #delete only git environment
-git restore --staged 'filename'
-git reset file name #move file staging area to workspace
+git rm file name #permenantly deleted(working and staging area)
+git rm --cached filename #removes the file from the staging area (index), but keeps it in the working directory.
+git restore --staged 'filename' #removes the file from the staging area (index) but does not modify the working directory.
+git reset file name #removes the file from the staging area but may revert the file
 git reset --hard
 git reset --soft
-git revert
-git clean -n #dry run
-git clean -f #forcefully
+git revert #used to create a new commit that undoes the changes of a previous commit
+git clean -n #dry run check which files are untracked (i.e., not staged or committed) and would be deleted if you run git clean -f.
+git clean -f #forcefully delete untracked files in your Git working directory.
 git tag #see all the list of tag
 git tag -a <tag name> -m <"msg"><commit id>
