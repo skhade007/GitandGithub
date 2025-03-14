@@ -46,8 +46,10 @@ git remote add origin https://github.com/skhade007/localrepo.git #connection est
  git remote -v #to check remote
                     origin  https://github.com/skhade007/localrepo.git (fetch)
                     origin  https://github.com/skhade007/localrepo.git (push)
- 
-
+git remote rename origin mmyname #rename origin to myname 
+ git remote -v #to check remote
+                    myname  https://github.com/skhade007/localrepo.git (fetch)
+                    myname  https://github.com/skhade007/localrepo.git (push)
 git branch #to check which branch
   * master
 git branch -M main #rename  master branch main because hub branch name is also main thats why we can also try to master but that tym hub name also changed as amaster.
@@ -57,33 +59,3 @@ git push origin main #######data sucessfully save in hub repo########
 after that we can also create new file in that folder and try to push successfully(ex: create one file in same folder and try to push in hub)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-assigmnt2:create branches and try to merge hub and local:
-git branch feature1 #create one branch and here data is same as main branch also use #git checkout -b feature1 #create and automatically navigate.
-  feature1
-git checkout feature1 #go to feature1 branch
-git branch
-  * feature1
-  main
-# current branch not deleted,first checkout the another branch then delete(create one feature2 branch and try to delete as mention below)
-git branch -d feature2 #featrue2 branch deleted
-git branch
-  * feature1
-    main
-do changes on feature1 branch # then we can change branch main and see there is no data available as feature branch.
-git status
-git add and commit.
-git push origin feature1 # push this branch to hub
-#here is hub shows feature and main branch and now try to merge on hub first
-git branch
-  * feature1
-    main
-git diff main #see difrence in branches,when we are in feature1 branch that tym is run
-
-Two ways to merge: for hub merge branches using PR(pull request)
- 1)#try to merge in github using compare and pull request option then pull on local machine,after pull/merge both branch data is same.
-#in hub both branch are merge after the PR but local machine still both branch not merge 
-git pull origin main #remote changes on local machie
-2)git branch
-* feature1
-    main
-git merge main# used to merge branches in local mashine and then oush on hub.
